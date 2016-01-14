@@ -1,0 +1,10 @@
+﻿Name: Angular2
+AntiForgery: enabled
+Author: Lombiq Technologies
+Website: http://lombiq.com
+Version: 1.0
+OrchardVersion: 1.9
+Description: Angular2
+Features:
+    Orchard.Angular2:
+        Description: Angular2.

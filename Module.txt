@@ -7,4 +7,4 @@ OrchardVersion: 1.9
 Description: Angular2
 Features:
     Orchard.Angular2:
-        Description: Angular2.
+        Description: Angular2

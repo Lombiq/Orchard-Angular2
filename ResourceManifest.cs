@@ -15,9 +15,9 @@ namespace Orchard.Angular2
             manifest.DefineScript("Es6Shim").SetUrl("es6-shim/es6-shim.min.js");
             manifest.DefineScript("SystemPolyfills").SetUrl("systemjs/dist/system-polyfills.js");
             manifest.DefineScript("Angular2Polyfills").SetUrl("angular2/bundles/angular2-polyfills.min.js");
-            manifest.DefineScript("SystemJs").SetUrl("systemjs/dist/system.src.js");
+            manifest.DefineScript("SystemJs").SetUrl("systemjs/dist/system.src.js").SetDependencies("Es6Shim", "SystemPolyfills", "Angular2Polyfills");
             manifest.DefineScript("RxJs").SetUrl("rxjs/bundles/Rx.min.js");
-            manifest.DefineScript("Angular2").SetUrl("angular2/bundles/angular2.dev.js").SetDependencies("Es6Shim", "SystemPolyfills", "Angular2Polyfills", "SystemJs", "RxJs");
+            manifest.DefineScript("Angular2").SetUrl("angular2/bundles/angular2.dev.js").SetDependencies("RxJs");
         }
     }
 }

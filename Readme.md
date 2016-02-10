@@ -33,3 +33,26 @@ System.import("tenant-editor").then(null, console.error.bind(console));
 - Define these in your ResourceManifest
 - Make this delicate dependency chain: manifest.DefineScript("System.Import").SetUrl("system-import.js").SetDependencies("SystemJs", "System.Config", "Angular2");
 - Inculde only System.Import into your documents' _head_
+
+
+## Bootstrapping Angular2 application
+
+- Load the scripts as discussed above.
+- You need an application folder what you import during the System.import call.
+- You need a bootstrapper/main script what will bootstrap your application and load the main components.
+-- Name: bootstrap.ts
+-- Content:
+import {bootstrap}    from 'angular2/platform/browser'
+import {TenantEditorComponent} from './tenant-editor.component'
+bootstrap(TenantEditorComponent);
+- You need a main component.
+-- Name: tenant-editor.component.ts
+-- Content:
+import {Component} from 'angular2/core';
+
+@Component({
+    selector: 'my-app',
+    template: '<h1>My First Angular 2 App</h1>'
+})
+export class TenantEditorComponent { }
+- And finally as we specified above a <my-app>Loading...</my-app> element.

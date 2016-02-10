@@ -56,3 +56,35 @@ import {Component} from 'angular2/core';
 })
 export class TenantEditorComponent { }
 - And finally as we specified above a <my-app>Loading...</my-app> element.
+
+
+## Learning material
+
+- Angular2 Quickstart: https://angular.io/docs/ts/latest/quickstart.html
+- Angular2 Tutorial: https://angular.io/docs/ts/latest/tutorial/
+- Angular2 Developer Guide: https://angular.io/docs/ts/latest/guide/
+- Typescript Tutorial: http://www.typescriptlang.org/Tutorial
+
+
+## Softwares
+
+- Visual Studio 2015
+- Typescript 1.8.1.0 beta for Visual Studio 2015
+- Set TypescriptToolVersion to 1.8 in your project
+- A tsconfig.json like this:
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "system",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "Scripts/node_modules"
+  ]
+}
+- Compile on save won't work in Visual Studio, if you want to build the your .ts files you have to build your project. (Or fire up a tsc file watcher with npm.)

@@ -71,7 +71,7 @@ export class TenantEditorComponent { }
 - Visual Studio 2015
 - Typescript 1.8.1.0 beta for Visual Studio 2015
 - Set TypescriptToolVersion to 1.8 in your project
-- A tsconfig.json like this:
+- A tsconfig.json like this (this must be placed into the project's root):
 {
   "compilerOptions": {
     "emitDecoratorMetadata": true,

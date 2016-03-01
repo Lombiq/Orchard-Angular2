@@ -88,3 +88,19 @@ export class TenantEditorComponent { }
   ]
 }
 - Compile on save won't work in Visual Studio, if you want to build the your .ts files you have to build your project. (Or fire up a tsc file watcher with npm.)
+
+## Upgrading Angular2
+
+- Update package.json package versions.
+- Delete scripts/node-modules folder.
+- Delete scripts/typings folder.
+- Run "npm install" commad in the scripts folder to get all packages.
+- Run "npm run" commad in the scripts folder to get the typings.
+- Re-add node_modules and typings folder to the VS.
+- Delete some compiled app code.
+- Build, maybe several times.
+
+### Possibles fixes after upgrade
+
+- Deleting scripts/node-modules/angular2/ts folder.
+- Deleting scripts/node-modules/reflect-metadata folder.
